@@ -19,6 +19,7 @@
 #import "ThemesGenerator.h"
 #import "StoryboardsGenerator.h"
 #import "SeguesGenerator.h"
+#import "StringsDictGenerator.h"
 
 @implementation RGenerator
 
@@ -39,6 +40,7 @@
     if (![Session shared].skipStrings && ([[Session shared] resourcesToGenerate] & ResourceTypeStrings))
     {
         [generators addObject:[[StringsGenerator alloc] initWithResourceFinder:self.finder]];
+        [generators addObject:[[StringsDictGenerator alloc] initWithResourceFinder:self.finder]];
     }
     
     if (![Session shared].skipImages && ([[Session shared] resourcesToGenerate] & ResourceTypeImages))
