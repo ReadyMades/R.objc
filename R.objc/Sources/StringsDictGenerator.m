@@ -198,20 +198,6 @@
             NSString* implString = [NSString stringWithFormat:@"return %@;", [self localizedStringWithKey:key fromTable:res.filename]];
             RMethodImplementation* impl = [[RMethodImplementation alloc] initWithReturnType:@"NSString*" signature:codableKey implementation:implString];
             [clazz.implementation.methods addObject:impl];
-            
-            NSString* valueString = res.fileContent[key];
-            if ([self stringContainsFormat:valueString])
-            {
-                // method declaration for keys with formats
-                codableKey = [self methodNameFromMethod:codableKey withFormat:valueString];
-                method = [[RMethodSignature alloc] initWithReturnType:@"NSString*" signature:codableKey];
-                [clazz.interface.methods addObject:method];
-                
-                // implementation for keys with formats
-                NSString* implString = [NSString stringWithFormat:@"return [NSString stringWithFormat:%@%@];", [self localizedStringWithKey:key fromTable:res.filename], [self parametersSequenceFromFormat:valueString]];
-                RMethodImplementation* impl = [[RMethodImplementation alloc] initWithReturnType:@"NSString*" signature:codableKey implementation:implString];
-                [clazz.implementation.methods addObject:impl];
-            }
         }
     }
     
@@ -230,20 +216,6 @@
 }
 
 #pragma mark - Utils
-
-- (BOOL) stringContainsFormat:(NSString*)string
-{
-    NSArray<NSNumber*>* output = [FormattedStringParser parserFormat:string];
-    for (NSNumber* placeholder in output)
-    {
-        PlaceholderType pht = [placeholder intValue];
-        if (pht != PlaceholderTypeUnknown)
-        {
-            return true;
-        }
-    }
-    return false;
-}
 
 - (NSString*) methodNameFromMethod:(NSString*)method withFormat:(NSString*)format
 {

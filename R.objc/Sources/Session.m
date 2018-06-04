@@ -143,7 +143,6 @@ static Session* _session;
                 }
                 
                 BOOL isDirectory;
-                NSLog(@"%@",_session._baseURL.absoluteString);
                 if (![[NSFileManager defaultManager] fileExistsAtPath:_session._baseURL.path isDirectory:&isDirectory])
                 {
                     [CommonUtils log:@"Invalid path: %@", s];

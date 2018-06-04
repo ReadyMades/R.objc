@@ -22,6 +22,7 @@
 		ADB495071EDF5F36007255EF /* StringsGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB494FA1EDF5F36007255EF /* StringsGenerator.m */; };
 		ADB495081EDF5F36007255EF /* ThemesGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB494FC1EDF5F36007255EF /* ThemesGenerator.m */; };
 		ADB4950B1EDF5F68007255EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ADB4950A1EDF5F68007255EF /* main.m */; };
+		D774A61120C565D000296584 /* StringsDictGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = D774A61020C565D000296584 /* StringsDictGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,6 +70,8 @@
 		ADB494FB1EDF5F36007255EF /* ThemesGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemesGenerator.h; sourceTree = "<group>"; };
 		ADB494FC1EDF5F36007255EF /* ThemesGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemesGenerator.m; sourceTree = "<group>"; };
 		ADB4950A1EDF5F68007255EF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = R.objc/main.m; sourceTree = "<group>"; };
+		D774A60F20C565D000296584 /* StringsDictGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StringsDictGenerator.h; sourceTree = "<group>"; };
+		D774A61020C565D000296584 /* StringsDictGenerator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringsDictGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,8 @@
 				ADB494F81EDF5F36007255EF /* StoryboardsGenerator.m */,
 				ADB494F91EDF5F36007255EF /* StringsGenerator.h */,
 				ADB494FA1EDF5F36007255EF /* StringsGenerator.m */,
+				D774A60F20C565D000296584 /* StringsDictGenerator.h */,
+				D774A61020C565D000296584 /* StringsDictGenerator.m */,
 				ADB494FB1EDF5F36007255EF /* ThemesGenerator.h */,
 				ADB494FC1EDF5F36007255EF /* ThemesGenerator.m */,
 			);
@@ -194,7 +199,7 @@
 				TargetAttributes = {
 					06803EAC1ED5BDED0006208A = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = R7FQ553TEY;
+						DevelopmentTeam = 8QUY33672L;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -256,6 +261,7 @@
 			files = (
 				ADB4950B1EDF5F68007255EF /* main.m in Sources */,
 				ADB494FD1EDF5F36007255EF /* BaseGenerator.m in Sources */,
+				D774A61120C565D000296584 /* StringsDictGenerator.m in Sources */,
 				ADB494FE1EDF5F36007255EF /* CommonUtils.m in Sources */,
 				ADB495051EDF5F36007255EF /* Session.m in Sources */,
 				ADB495081EDF5F36007255EF /* ThemesGenerator.m in Sources */,
@@ -367,7 +373,7 @@
 			baseConfigurationReference = 18C13112009EA32D40691109 /* Pods-R.objc.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = R7FQ553TEY;
+				DEVELOPMENT_TEAM = 8QUY33672L;
 				PRODUCT_NAME = Robjc;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -378,7 +384,7 @@
 			baseConfigurationReference = 2FF7613DC3430DBD2D0C30FC /* Pods-R.objc.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				DEVELOPMENT_TEAM = R7FQ553TEY;
+				DEVELOPMENT_TEAM = 8QUY33672L;
 				PRODUCT_NAME = Robjc;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};

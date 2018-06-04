@@ -19,7 +19,6 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        NSLog(@"%s",argv[0]);
         int result = [Session initWith:argc params:argv];
         if (result != 0)
         {
