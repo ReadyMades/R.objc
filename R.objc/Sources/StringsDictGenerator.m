@@ -49,7 +49,7 @@
             return nil;
         }
         self.contentByLocale = [NSMutableDictionary new];
-        _className = [NSString stringWithFormat:@"R%@", [[CommonUtils classNameFromFilename:self.filename removingExtension:@".stringsdict"] stringByAppendingString:@"Dict"]];
+        _className = [NSString stringWithFormat:@"R%@", [CommonUtils classNameFromFilename:self.filename removingExtension:@".stringsdict"]];
         _classType = [NSString stringWithFormat:@"%@*", self.className];
         _methodName = [CommonUtils methodNameFromFilename:self.filename removingExtension:@".stringsdict"];
     }
@@ -86,7 +86,7 @@
 
 - (NSString *)propertyName
 {
-    return @"string";
+    return @"stringDict";
 }
 
 - (BOOL)generateResourceFileWithError:(NSError *__autoreleasing *)error
