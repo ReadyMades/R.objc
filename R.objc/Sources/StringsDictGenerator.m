@@ -285,7 +285,7 @@
     {
         return [NSString stringWithFormat:@"SDLocalizedStringFromTable(@\"%@\", @\"%@\")", key, table];
     } else {
-        table = [table stringByReplacingOccurrencesOfString:@".strings" withString:@""];
+        table = [table stringByReplacingOccurrencesOfString:@".stringsdict" withString:@""];
         return [NSString stringWithFormat:@"NSLocalizedStringFromTable(@\"%@\", @\"%@\", nil)", key, table];
     }
 }
@@ -313,7 +313,7 @@
         NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:pattern options:0 error:error];
         if (*error != nil)
         {
-            [CommonUtils log:@"Error in regex inside StringsGenerator.m"];
+            [CommonUtils log:@"Error in regex inside StringsDictGenerator.m"];
             return NO;
         }
         
